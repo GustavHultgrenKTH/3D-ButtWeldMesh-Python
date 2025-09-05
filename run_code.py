@@ -6,10 +6,10 @@ weld_file  = os.path.join(base, "specimen02.pcd")  # or .mat
 
 bw = buttweld3d.initialize()
 try:
-    inputFile, nodeFile, elemFile = bw.fun_buttweld_3D(param_file, weld_file, "specimen02", nargout=3)
+    inputFile = bw.fun_buttweld_3D(param_file, weld_file, "specimen02", nargout=1)
     print("inputFile:", inputFile)
-    print("nodeFile:", nodeFile)
-    print("elemFile:", elemFile)
+    #print("nodeFile:", nodeFile)
+    #print("elemFile:", elemFile)
 finally:
     try: bw.terminate()
     except Exception: pass
