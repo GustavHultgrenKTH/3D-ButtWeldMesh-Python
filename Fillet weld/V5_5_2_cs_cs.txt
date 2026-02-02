@@ -1,0 +1,33 @@
+# ---- profile geometry ----
+x_offset = 0
+y_offset = +0.31
+z_offset = auto   % auto -> z(0) = 0
+z_idx_start = first
+z_idx_end = last
+
+
+# ---- static geometry / resolution ----
+t = 10
+l_left  = 25
+l_right = 25
+
+x_refin = [-7.5, 9.5]
+x_refin_width = 8
+
+
+
+res_local = 0.03
+res_thickness = auto   % auto -> res_local/2
+
+# ---- transition pattern ----
+kmax = 2
+nkelem = [10, 2, 0, 0, 0, 0]
+
+# ---- materials / elements / export ----
+element_type = 186
+E  = 205000
+nu = 0.3
+export = true
+
+# ---- solver selection ----
+solver = ABAQUS   % ANSYS or ABAQUS
