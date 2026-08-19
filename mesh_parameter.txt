@@ -1,0 +1,36 @@
+# ---- weld geometry ----
+weld_type = BUTT   % FILLET or BUTT
+
+# ---- profile geometry ----
+x_offset = -35
+y_offset = +0.205
+z_offset = auto   % auto -> z(0) = 0
+z_idx_start = first
+z_idx_end = 40
+
+# ---- static geometry / resolution ----
+side = "both"    % "left","right" or "both"
+t = 15
+l_left  = 20
+l_right = 20
+
+x_refin = [-9, 9]
+x_refin_width = 4
+
+res_local = 0.10
+res_thickness = 0.08   % auto -> res_local/2
+
+bias_exponent = 1.6
+
+# ---- transitvion pattern ----
+kmax = 4
+nkelem = [20, 0, 0, 0, 0, 0]
+
+# ---- materials / elements / export ----
+element_type = 186
+E  = 210000
+nu = 0.3
+export = true
+
+# ---- solver selection ----
+solver = ABAQUS   % ANSYS or ABAQUS
